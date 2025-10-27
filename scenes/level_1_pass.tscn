@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://c54msedosiv5v"]
+
+[ext_resource type="Script" uid="uid://in72imtu2rmy" path="res://scripts/level_1_pass.gd" id="1_5iw66"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5iw66"]
+size = Vector2(93, 58)
+
+[node name="Level1 pass" type="Area2D"]
+script = ExtResource("1_5iw66")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(36.5, 19)
+shape = SubResource("RectangleShape2D_5iw66")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "What is the key"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 68.5625
+offset_bottom = 31.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="text_submitted" from="CanvasLayer/Control/LineEdit" to="." method="_on_line_edit_text_submitted"]

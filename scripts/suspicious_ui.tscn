@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr2rk5vw1rb7s"]
+
+[ext_resource type="Script" uid="uid://dlke2bqqfb87u" path="res://scripts/suspicious_ui.gd" id="1_swkrp"]
+[ext_resource type="Texture2D" uid="uid://bnuv8qtqjw85t" path="res://assets/level2 pass.png" id="2_swkrp"]
+
+[node name="SuspiciousUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 218.0
+offset_bottom = 90.0
+script = ExtResource("1_swkrp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.4999365, -0.49992895)
+scale = Vector2(1.0020887, 1.0394232)
+texture = ExtResource("2_swkrp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.6, 0.6)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -574.0
+offset_top = -315.0
+offset_right = -22.0
+offset_bottom = -258.0
+theme_override_colors/font_color = Color(1, 0.039215688, 0.05490196, 1)
+theme_override_font_sizes/font_size = 30
+text = "Which user's ip address is suspicious? "
+
+[node name="KeyInput" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = -18.0
+offset_top = -311.0
+offset_right = 347.0
+offset_bottom = -264.0
+
+[node name="SubmitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 367.0
+offset_top = -325.0
+offset_right = 476.0
+offset_bottom = -242.0
+theme_override_colors/font_color = Color(0.10980392, 0.09803922, 0.015686275, 1)
+theme_override_font_sizes/font_size = 20
+text = "Submit"
+
+[node name="MessageLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -236.0
+offset_top = -227.0
+offset_right = 206.0
+offset_bottom = -159.0
+theme_override_colors/font_color = Color(1, 0.047058824, 0.050980393, 1)
+theme_override_font_sizes/font_size = 30
+
+[connection signal="text_submitted" from="KeyInput" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="SubmitButton" to="." method="_on_SubmitButton_pressed"]

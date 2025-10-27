@@ -1,0 +1,134 @@
+[gd_scene load_steps=4 format=3 uid="uid://byksgm6m4aonc"]
+
+[ext_resource type="Script" uid="uid://kcwfa4pa4m2n" path="res://scripts/togame_3_back.gd" id="1_6bwch"]
+[ext_resource type="Texture2D" uid="uid://crrdsaqh46ebc" path="res://assets/server.png" id="1_m3u1i"]
+[ext_resource type="Texture2D" uid="uid://c0igwyqboslyc" path="res://assets/back.png" id="2_ja7sr"]
+
+[node name="server" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(950.9999, 537.5)
+scale = Vector2(3.6387827, 2.4237669)
+texture = ExtResource("1_m3u1i")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(947, 538)
+zoom = Vector2(0.6, 0.6)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 628.0
+offset_bottom = 1065.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Name
+"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Client 1
+"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Client 2
+"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Client 3"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 656.0
+offset_top = 5.0
+offset_right = 1284.0
+offset_bottom = 1070.0
+
+[node name="Label" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "IP address
+"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "192.168.31.127
+"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "192.168.31.127
+"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "192.168.10.108"
+horizontal_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1292.0
+offset_top = -3.0
+offset_right = 1920.0
+offset_bottom = 1062.0
+
+[node name="Label" type="Label" parent="VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Access
+"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Block
+ "
+
+[node name="Button2" type="Button" parent="VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Block
+ "
+
+[node name="Button3" type="Button" parent="VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Block"
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1606.75, 901)
+scale = Vector2(2.279661, 2)
+texture = ExtResource("2_ja7sr")
+
+[node name="togame3back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1544.0
+offset_top = 847.0
+offset_right = 1676.0
+offset_bottom = 953.0
+script = ExtResource("1_6bwch")
+
+[connection signal="pressed" from="togame3back" to="togame3back" method="_on_pressed"]

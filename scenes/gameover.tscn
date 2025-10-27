@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://dme5hap1e05ko"]
+
+[ext_resource type="Texture2D" uid="uid://ln2mo35e54t5" path="res://assets/download (4).jpg" id="1_2mkfd"]
+[ext_resource type="Script" uid="uid://b5ejno54a5skw" path="res://scripts/restart.gd" id="2_h8i2o"]
+[ext_resource type="Script" uid="uid://drf3xm4lcplt6" path="res://scripts/exit_2.gd" id="3_mt7yr"]
+
+[node name="gameover" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -89.0
+offset_top = -49.0
+offset_right = 88.0
+offset_bottom = 49.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel"]
+position = Vector2(89.63027, 48.73214)
+scale = Vector2(0.5207344, 0.51561415)
+texture = ExtResource("1_2mkfd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = -28.0
+offset_right = 188.0
+offset_bottom = 139.0
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Game Over"
+horizontal_alignment = 1
+
+[node name="restart" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "Restart"
+script = ExtResource("2_h8i2o")
+
+[node name="exit2" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "Exit"
+script = ExtResource("3_mt7yr")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, 0)
+zoom = Vector2(3, 3)
+
+[connection signal="pressed" from="Panel/VBoxContainer/restart" to="Panel/VBoxContainer/restart" method="_on_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/exit2" to="Panel/VBoxContainer/exit2" method="_on_pressed"]
