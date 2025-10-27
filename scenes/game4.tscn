@@ -247,7 +247,7 @@ offset_left = 791.0
 offset_top = 148.0
 offset_right = 1219.0
 offset_bottom = 171.0
-text = "You have learnt how to controll broken access controls."
+text = "You have learnt how to control broken access controls."
 
 [node name="finish" parent="." instance=ExtResource("4_j3kiu")]
 position = Vector2(1309, 200)

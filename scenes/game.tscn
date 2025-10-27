@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bpow82l1eoyq8"]
+[gd_scene load_steps=18 format=3 uid="uid://bpow82l1eoyq8"]
 
 [ext_resource type="Texture2D" uid="uid://wkvnlx2ad1lt" path="res://assets/Assets_City.png" id="3_iywne"]
 [ext_resource type="Texture2D" uid="uid://crrdsaqh46ebc" path="res://assets/server.png" id="3_lbhrr"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://bqn3o7tjc2k5p" path="res://scenes/main_player.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://dm64nsq78w58e" path="res://scenes/platform.tscn" id="4_p57ef"]
 [ext_resource type="Texture2D" uid="uid://bmv1n3hglfls4" path="res://assets/4. Penguin World/1_PenguinWorld1_Tileset_3_Background.png" id="4_u5sy4"]
-[ext_resource type="FontFile" uid="uid://i2bkxdcfuqt4" path="res://assets/GamepauseddemoRegular-RpmY6.otf" id="5_gee14"]
 [ext_resource type="PackedScene" uid="uid://yby8yi48yfle" path="res://scenes/killzone.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://m0nv4cstmqlr" path="res://scenes/level_1_2.tscn" id="9_0tnpc"]
 
@@ -347,7 +346,6 @@ offset_top = -113.0
 offset_right = -857.0
 offset_bottom = -64.0
 theme_override_colors/font_color = Color(1, 0.09411765, 0.14509805, 1)
-theme_override_fonts/font = ExtResource("5_gee14")
 text = "Warning!! Someone has
 accessed the server."
 
@@ -362,7 +360,6 @@ offset_top = -111.0
 offset_right = -496.0
 offset_bottom = -68.0
 theme_override_colors/font_color = Color(0.9882353, 0.0627451, 0.047058824, 1)
-theme_override_fonts/font = ExtResource("5_gee14")
 text = "Try to regain the access
 by solving each quizes."
 
@@ -380,7 +377,6 @@ offset_top = -111.0
 offset_right = -287.0
 offset_bottom = -80.0
 theme_override_colors/font_color = Color(1, 0.05882353, 0.05490196, 1)
-theme_override_fonts/font = ExtResource("5_gee14")
 theme_override_font_sizes/font_size = 25
 text = "Good Luck!!"
 
@@ -390,7 +386,6 @@ offset_top = 32.0
 offset_right = 1267.0
 offset_bottom = 55.0
 theme_override_colors/font_color = Color(1, 0.0627451, 0.039215688, 1)
-theme_override_fonts/font = ExtResource("5_gee14")
 text = "Something is here..."
 
 [node name="Label5" type="Label" parent="."]
@@ -399,7 +394,6 @@ offset_top = 95.0
 offset_right = 1680.0
 offset_bottom = 118.0
 theme_override_colors/font_color = Color(1, 0.03529412, 0.050980393, 1)
-theme_override_fonts/font = ExtResource("5_gee14")
 text = "Q3liZXJTZWN1cml0eQ=="
 
 [node name="level1-2" parent="." instance=ExtResource("9_0tnpc")]
@@ -411,5 +405,4 @@ offset_top = 44.0
 offset_right = 1403.0
 offset_bottom = 67.0
 theme_override_colors/font_color = Color(1, 0.050980393, 0.02745098, 1)
-theme_override_fonts/font = ExtResource("5_gee14")
 text = "Hint: Try base 64"

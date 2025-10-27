@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=3 uid="uid://cb4em02d0u0cr"]
+
+[ext_resource type="Script" uid="uid://70v53s1l1vxu" path="res://scripts/access_ui.gd" id="1_lyqyw"]
+[ext_resource type="Texture2D" uid="uid://bj8hs17hwxte0" path="res://assets/level1 pass.png" id="2_qtso8"]
+[ext_resource type="Script" uid="uid://c8xo6qr3bdfq2" path="res://scripts/answer.gd" id="3_nrasp"]
+
+[node name="AccessUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 218.0
+offset_bottom = 90.0
+script = ExtResource("1_lyqyw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.25003195, 0.50007665)
+scale = Vector2(1.0002611, 1.0259118)
+texture = ExtResource("2_qtso8")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.6, 0.6)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -370.0
+offset_top = -309.0
+offset_right = -113.0
+offset_bottom = -252.0
+theme_override_colors/font_color = Color(1, 0.039215688, 0.05490196, 1)
+theme_override_font_sizes/font_size = 30
+text = "Enter Access key: "
+
+[node name="KeyInput" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = -112.0
+offset_top = -305.0
+offset_right = 253.0
+offset_bottom = -258.0
+
+[node name="SubmitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 282.0
+offset_top = -322.0
+offset_right = 391.0
+offset_bottom = -239.0
+theme_override_colors/font_color = Color(0.10980392, 0.09803922, 0.015686275, 1)
+theme_override_font_sizes/font_size = 20
+text = "Submit"
+
+[node name="MessageLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -95.0
+offset_top = -227.0
+offset_right = 206.0
+offset_bottom = -159.0
+theme_override_colors/font_color = Color(1, 0.047058824, 0.050980393, 1)
+theme_override_font_sizes/font_size = 30
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -903.0
+offset_top = -477.0
+offset_right = -779.0
+offset_bottom = -427.0
+theme_override_font_sizes/font_size = 30
+text = "Answer:
+"
+script = ExtResource("3_nrasp")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = -756.0
+offset_top = -472.0
+offset_right = -315.0
+offset_bottom = -432.0
+
+[connection signal="text_submitted" from="KeyInput" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="SubmitButton" to="." method="_on_SubmitButton_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

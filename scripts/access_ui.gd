@@ -8,6 +8,7 @@ extends Control
 
 func _ready():
 	message_label.text = ""
+	
 
 func _on_SubmitButton_pressed():
 	var entered = key_input.text.strip_edges()
